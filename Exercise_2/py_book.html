@@ -3,16 +3,26 @@
     <head>
         <title>E-Learning Website</title>
         <link rel="stylesheet" href=".\css\styles.css">
+        <link href="..\Rescources\images\logo_header.webp" rel="icon">
 
         <meta charset="UTF-8">
         <meta name="description" content="E-Learning.">
         <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
+
+        <style>
+            #book_cover {
+                float: left;
+                height: auto;
+                max-width: 450px;
+                margin-right: 25px;
+            }
+        </style>
     </head>
 
     <body>
         <header class="navbar">
             <a href="index2.html">
-                <img src="..\Rescources\images\logo_link.webp" alt=""width="200" height="200">
+                <img class="logo" src="..\Rescources\images\logo_link.webp" alt="">
             </a>
 
             <ul>
@@ -20,12 +30,12 @@
                 <li><a href="about_us.html">About Us</a></li>
             </ul>
         </header>
-        <h1>Thinkpython2</h1>
         <a href="python_intro.html">Go back</a>
-        <h3>Allen Downey</h3>
+        <h1>Thinkpython2</h1>
+        <h3>Author: Allen Downey</h3>
         <h3>Release date : 2016</h3>
         <h3>Rating : 4,6/5🌟 (602)</h3>
-        <img src="..\Rescources\images\thinkpython.png" alt="">
+        <img id="book_cover" src="..\Rescources\images\thinkpython.png" alt="">
         <p>
             <p>If you want to learn how to program, working with Python is an excellent way to start.
             This hands-on guide takes you through the language a step at a time, beginning with basic programming concepts before moving on to functions, recursion, data structures, and object-oriented design. This second edition and its supporting code have been updated for Python 3.
@@ -65,6 +75,12 @@
                     <h2>
                         <a name="Q1">The way of the program</a><a href="#Q0">🔝</a>
                     </h2>
+                    
+                    <div class="floating_image">
+                        <img src="..\Rescources\images\py1.jpg" alt="" >
+                        <p><i>A simple python code.</i></p>
+                    </div>
+
                     <p>
                         The goal of this book is to teach you to think like a computer scientist. This way of thinking combines some of the best features of mathematics, engineering, and natural science.
                         Like mathematicians, computer scientists use formal languages to denote ideas (specifically computations). Like engineers, they design things, assembling components into systems and evaluating tradeoffs among alternatives. Like scientists, they observe the behavior of complex systems, form hypotheses, and test predictions.
@@ -73,10 +89,8 @@
                         excellent opportunity to practice problem-solving skills. That’s why this chapter is called,
                         “The way of the program”.
                         On one level, you will be learning to program, a useful skill by itself. On another level, you
-                        will use programming as a means to an end. As we go along, that end will become clearer
+                        will use programming as a means to an end. As we go along, that end will become clearer.
                     </p>
-                    <img src="..\Rescources\images\py1.jpg" alt="" width="200" height="200">
-                    <i>A simple python code.</i>
                 </section>
             </li>
             <li>
@@ -84,6 +98,12 @@
                     <h2>
                         <a name="Q2">Variables, expressions and statements</a><a href="#Q0">🔝</a>
                     </h2>
+
+                    <div class="floating_image">
+                        <img src="..\Rescources\images\py2.jpg" alt="">
+                        <p><i>Different python variables.</i></p>
+                    </div>
+
                     <p>
                         One of the most powerful features of a programming language is the ability to manipulate
                         variables. A variable is a name that refers to a value.
@@ -100,8 +120,6 @@
                         of the variables is in (think of it as the variable’s state of mind). Figure 2.1 shows the result
                         of the previous example.
                      </p>
-                     <img src="..\Rescources\images\py2.jpg" alt="" width="200" height="200">
-                     <i>Different python variables.</i>
                 </section>
             </li>
             <li>

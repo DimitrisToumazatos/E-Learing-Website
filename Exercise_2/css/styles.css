@@ -1,34 +1,3 @@
-/* Sets backround colour and default font */
-body {
-    font: 14px/1.6 'Open Sans' ,"Helvetica";
-    background-color:rgb(193, 221, 249);
-    overflow-x: hidden;
-}
-
-/* Sets default header 1 colour and positioning */
-h1 {
-    color: black;
-    text-align: center;
-    margin: 1.5em;
-}
-
-/* Sets default header 2 colour and positioning */
-h2 {
-    color: black;
-    text-align: left;
-    margin-left: 0.2em;
-}
-.navbar img {
-    max-width: 100%;
-    height: 150px;
-  }
-
-/* Sets font size and style for numbers in book and lecture contents */
-.big-numbered-list > li::marker {
-    font-weight: bold;
-    font-size: 21px;
-}
-
 /* Sets navigation bar colour and positioning */
 .navbar{
     background-color: #88b7f4;
@@ -70,6 +39,44 @@ h2 {
 /* Increase the width of the underline on hover */
 .navbar li > a:hover::after {
     width: 100%; /* Full width underline */
+}
+
+/* Sets backround colour and default font */
+body {
+    font: 14px/1.6 'Open Sans' ,"Helvetica";
+    background-color:rgb(193, 221, 249);
+    overflow-x: hidden;
+}
+
+/* Sets default header 1 colour and positioning */
+h1 {
+    color: black;
+    text-align: center;
+    margin: 1.5em;
+}
+
+/* Sets default header 2 colour and positioning */
+h2 {
+    color: black;
+    text-align: left;
+    margin-left: 0.2em;
+}
+
+.logo {
+    max-width: 100%;
+    height: 150px;
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+/* Sets font size and style for numbers in book and lecture contents */
+.big-numbered-list > li::marker {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.floating_image {
+    float: right;
+    margin-left: 15px;
 }
 
 footer ul {
