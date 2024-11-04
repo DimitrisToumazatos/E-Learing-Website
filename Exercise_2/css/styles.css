@@ -68,15 +68,49 @@ h2 {
     mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
 }
 
-/* Sets font size and style for numbers in book and lecture contents */
-.big-numbered-list > li::marker {
-    font-weight: bold;
-    font-size: 21px;
+/* List Styling */
+.big-numbered-list {
+    counter-reset: section;
+    padding: 0;
 }
 
+.big-numbered-list > li {
+    list-style: none;
+    counter-increment: section;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+
+/* Custom number styling for big numbered lists */
+.big-numbered-list > li::before {
+    content: counter(section) ". ";
+    font-weight: bold;
+    font-size: 21px;
+    position: relative;
+    left: 10px;
+    top: 17px;
+}
+
+/* Image Container Styling */
 .floating_image {
     float: right;
-    margin-left: 15px;
+    max-width: 400px;
+}
+
+.floating_image > img {
+    width: 100%;
+    height: auto;
+    float: left;
+    border-radius: 4px;
+}
+
+.floating_image > p {
+    float: right;
 }
 
 .lecture_books_links a{
