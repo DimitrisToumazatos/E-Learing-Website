@@ -85,6 +85,7 @@ h2 {
     margin-bottom: 20px;
     display: flex;
     gap: 15px;
+}
 
 /* Custom number styling for big numbered lists */
 .big-numbered-list > li::before {
@@ -113,11 +114,12 @@ h2 {
     float: right;
 }
 
-.lecture_books_links a{
+.simple_links a{
     color: black;
     text-decoration: none;
 }
-.lecture_books_links a:hover{
+
+.simple_links a:hover{
     text-decoration: underline;
 }
 
@@ -133,10 +135,9 @@ h2 {
     list-style-type: none;
 }
 
-.link_style{
+.link_style {
     list-style-type: none;
     font-weight: bold;
-
 }
 
 .subcategories {
@@ -164,4 +165,6 @@ footer {
     margin-right: -1em;
     margin-top: 5em;
     padding: 1.5em;
-}
+} 
+
+
