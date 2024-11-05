@@ -123,14 +123,17 @@ h2 {
 
 /* Image Container Styling */
 .floating_image {
+    right: 0;
+    position: relative;
     float: right;
+    margin-left: 15px;
     max-width: 400px;
 }
 
 .floating_image > img {
     width: 100%;
     height: auto;
-    float: left;
+    float: right;
     border-radius: 4px;
 }
 
