@@ -9,9 +9,10 @@
         <meta charset="UTF-8">
         <meta name="description" content="E-Learning.">
         <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
+        
         <style>
-
             #category-grid{
+                list-style-type: none;
                 display: grid;
                 grid:"1 2"
                      "3 4";
@@ -26,6 +27,22 @@
 
             #category-grid > li:nth-child(2n + 1) {
                 grid-area: 2n + 1;
+            }
+
+            #category-grid > li{
+                align-items: center;
+                justify-items: center;
+                padding: 20px;
+                border-radius: 8px;
+                background-color: #fcce73;
+                margin: 10px;
+                gap: 15px;
+                width: 90%;
+                height: 85%
+            }
+
+            #category-grid section{
+                position: relative;
             }
         </style>
     </head>
@@ -83,7 +100,7 @@
                         </h2>
                         <img src="..\Rescources\images\categories_pt.png" alt="" width="250" height="200">
                         <ul class="subcategories">
-                            <li><a href="#">Introduction to Probability Theory/a></li>
+                            <li><a href="#">Introduction to Probability Theory</a></li>
                             <li><a href="#">Probability Theorems</a></li>
                             <li><a href="#">Law of large numbers</a></li>
                             <li><a href="#">Using Probabilities in python</a></li>
@@ -98,7 +115,7 @@
                         </h2>
                         <img src="..\Rescources\images\categories_ai.jpg" alt="" width="250" height="200">
                         <ul class="subcategories">
-                            <li><a href="#">Introduction to Artificial Intelligence/a></li>
+                            <li><a href="#">Introduction to Artificial Intelligence</a></li>
                             <li><a href="#">Introduction to logic</a></li>
                             <li><a href="#">Machine Learning algorithms</a></li>
                             <li><a href="#">Machine Learning algorithms in python</a></li>
