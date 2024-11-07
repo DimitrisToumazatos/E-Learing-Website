@@ -1,3 +1,20 @@
+body {
+    font: 14px/1.6 'Open Sans' ,"Helvetica";
+    background-color:rgb(193, 221, 249);
+    overflow-x: hidden;
+    display: grid;
+    grid:"h h h"
+         "b b b"
+         "f f f";
+    grid-template-columns: auto auto auto;
+}
+header { grid-area: h; }
+main {
+    grid-area: b;
+    margin-left: 10px;
+}
+footer { grid-area: f; }
+
 /* Sets navigation bar colour and positioning */
 .navbar{
     background-color: #88b7f4;
@@ -41,11 +58,14 @@
     width: 100%; /* Full width underline */
 }
 
-/* Sets backround colour and default font */
-body {
-    font: 14px/1.6 'Open Sans' ,"Helvetica";
-    background-color:rgb(193, 221, 249);
-    overflow-x: hidden;
+aside {
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fcce73;
+    margin: 10px;
+    display: flex;
+    gap: 15px;
 }
 
 /* Sets default header 1 colour and positioning */

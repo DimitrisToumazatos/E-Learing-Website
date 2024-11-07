@@ -8,11 +8,31 @@
         <meta charset="UTF-8">
         <meta name="description" content="E-Learning.">
         <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
+        <style>
+            body {
+                font: 14px/1.6 'Open Sans' ,"Helvetica";
+                background-color:rgb(193, 221, 249);
+                overflow-x: hidden;
+                display: grid;
+                grid:"h h h"
+                     "b b c"
+                     "f f f";
+                grid-template-columns: auto 1fr 20%;
+            }
+            header { grid-area: h; }
+            main {
+                grid-area: b;
+                margin-left: 10px;
+            }
+            aside { grid-area: c; }
+            footer { grid-area: f; }
+
+        </style>
     </head>
 
     <body>
         <header class="navbar">
-            <a href="index2.html">
+            <a href="index3.html">
                 <img class="logo" src="..\Rescources\images\logo_link.webp" alt="" >
             </a>
             <!--<a class="logo_link" href="index.html">Tune Hogs</a> -->
@@ -34,24 +54,24 @@
                 <img src="..\Rescources\images\index.webp" alt="">
             </div>
             <p>
-                We are very happy to welcome you to our first ever E-Learning website that was created as an 
-                exercise for the "Web Development" at AUEB. Here you'll be able to acquire all the necessary 
-                knowledge to become a successful Software Developer Engineer. We offer a wide variety of courses 
-                that include pre-recorded Lectures and free e-Books. For more information about computer science 
-                and programming projects, please feel free to contact us using the information found in the bottom 
+                We are very happy to welcome you to our first ever E-Learning website that was created as an
+                exercise for the "Web Development" at AUEB. Here you'll be able to acquire all the necessary
+                knowledge to become a successful Software Developer Engineer. We offer a wide variety of courses
+                that include pre-recorded Lectures and free e-Books. For more information about computer science
+                and programming projects, please feel free to contact us using the information found in the bottom
                 part of the page or in the "About Us" page. Have fun!
             </p>
             <h2>
                 How to navigate the website:
             </h2>
             <p>
-                Since most of the links in this website are just for show, here is a quick guide on how to access 
+                Since most of the links in this website are just for show, here is a quick guide on how to access
                 functioning part of the website.
             </p>
             <ol>
                 <li>
                     <p>
-                        The 2 courses that you can use are Python and C++. Of those courses only the first 
+                        The 2 courses that you can use are Python and C++. Of those courses only the first
                         subcategory works (Introduction to Python and Introduction to C++).
                     </p>
                     <ul>
@@ -65,9 +85,9 @@
                 </li>
                 <li>
                     <p>
-                        The Python course has includes all the basic functionality for subcategory. In there 
-                        you will find a working Lecture and Book along with other suggestions that are 
-                        non-functioning. You will find the functioning parts in the first item of their 
+                        The Python course has includes all the basic functionality for subcategory. In there
+                        you will find a working Lecture and Book along with other suggestions that are
+                        non-functioning. You will find the functioning parts in the first item of their
                         respective lists for Lectures and Books.
                     </p>
                     <ul>
@@ -80,13 +100,14 @@
                     </ul>
                 </li>
             </ol>
-
+        </main>
+        <aside>
             <article>
                 <h3>
                     Create an Acount!
                 </h3>
                 <p>
-                    You have the option to create an account on our website and get personalized messages about 
+                    You have the option to create an account on our website and get personalized messages about
                     new content and news that align with your interests. Join now!
                 </p>
                 <form>
@@ -95,9 +116,9 @@
                     <label for="password">Password:</label><br>
                     <input type="password" id="password" name="password"><br><br>
                     <input type="submit" value="Submit">
-                </form> 
+                </form>
             </article>
-        </main>
+        </aside>
     </body>
 
     <footer><p>Copyright &copy; 2024</p>
