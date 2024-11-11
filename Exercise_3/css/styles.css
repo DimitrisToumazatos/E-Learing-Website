@@ -58,6 +58,18 @@ footer { grid-area: f; }
     width: 100%; /* Full width underline */
 }
 
+nav img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    margin-bottom: 5px;
+}
+nav img:hover {
+    transform: scale(1.1);
+}
+
 aside {
     position: relative;
     padding: 20px;
