@@ -2,44 +2,147 @@
 <html>
     <head>
         <title>E-Learning Website</title>
-        <!--<link href="resources/css/styles.css" rel="stylesheet" type="text/css">
-        <link href="resources/images/iconmonstr-disc-3.svg" rel="icon"> -->
+        <link rel="stylesheet" href=".\css\styles.css">
+        <link href="..\Rescources\images\logo_header.webp" rel="icon">
 
         <meta charset="UTF-8">
         <meta name="description" content="E-Learning.">
         <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
+        <style>
+            body {
+                background-color:rgb(193, 221, 249);
+                overflow-x: hidden;
+                display: grid;
+                grid:"h h h"
+                     "n b c"
+                     "f f f";
+                grid-template-columns: 80px 1fr 240px;
+            }
+            header { grid-area: h; }
+            main {
+                grid-area: b;
+                margin-left: 10px;
+            }
+            
+            aside { grid-area: c; }
+            footer { grid-area: f; }
+
+        </style>
     </head>
 
     <body>
         <header class="navbar">
-            <a href="index1.html">
-                <img src="..\Rescources\images\logo_link.webp" alt="">
+            <a href="index4.html">
+                <img class="logo" src="..\Rescources\images\logo_link.webp" alt="" >
             </a>
-            <!--<a class="logo_link" href="index.html">Tune Hogs</a> -->
 
             <ul>
                 <li><a href="categories.html">Categories</a></li>
                 <li><a href="about_us.html">About Us</a></li>
             </ul>
         </header>
+
+        <nav>
+            <a href="python_intro.html"><img src="..\Rescources\images\py_nav.png" alt="Python"></a>
+            <a href="cpp_intro.html"><img src="..\Rescources\images\cpp_nav.png" alt="C++"></a>
+            <a href="#"><img src="..\Rescources\images\prob_nav.webp" alt="Prob/ties"></a>
+            <a href="#"><img src="..\Rescources\images\ai_nav.png" alt="AI"></a>
+            <a href="#"><img src="..\Rescources\images\profile_nav.jpg" alt="Profile"></a>
+        </nav>
+
+        <main>
+            <h1>
+                Welcome to our Website!
+            </h1>
+            <h2>
+                Dimitris' and Sarkis' E-Learning Website:
+            </h2>
+            <div class="floating_image">
+                <img src="..\Rescources\images\index.webp" alt="">
+            </div>
+            <p>
+                We are very happy to welcome you to our first ever E-Learning website that was created as an
+                exercise for the "Web Development" at AUEB. Here you'll be able to acquire all the necessary
+                knowledge to become a successful Software Developer Engineer. We offer a wide variety of courses
+                that include pre-recorded Lectures and free e-Books. For more information about computer science
+                and programming projects, please feel free to contact us using the information found in the bottom
+                part of the page or in the "About Us" page. Have fun!
+            </p>
+            <h2>
+                How to navigate the website:
+            </h2>
+            <p>
+                Since most of the links in this website are just for show, here is a quick guide on how to access
+                functioning part of the website.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        The 2 courses that you can use are Python and C++. Of those courses only the first
+                        subcategory works (Introduction to Python and Introduction to C++).
+                    </p>
+                    <ul>
+                        <li>
+                            Path to "Introduction to Python": Categories>Introduction to Python.
+                        </li>
+                        <li>
+                            Path to "Introduction to C++": Categories>Introduction to C++.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        The Python course has includes all the basic functionality for subcategory. In there
+                        you will find a working Lecture and Book along with other suggestions that are
+                        non-functioning. You will find the functioning parts in the first item of their
+                        respective lists for Lectures and Books.
+                    </p>
+                    <ul>
+                        <li>
+                            Path to Lecture: Categories>Introduction to Python>Introduction to basic concepts.
+                        </li>
+                        <li>
+                            Path to Book: Categories>Introduction to C++>Thinkpython2.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </main>
+        <aside>
+            <article>
+                <h3>
+                    Create an Acount!
+                </h3>
+                <p>
+                    You have the option to create an account on our website and get personalized messages about
+                    new content and news that align with your interests. Join now!
+                </p>
+                <form>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email"><br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
+        </aside>
     </body>
 
-    <footer><p>Copyright &copy; 2024</p>
-        <div>
-            <h3>Sarkis Samouelian</h3>
+    <footer>
+        <p>Copyright &copy; 2024</p>
+        <div class="footer-info">
             <div>
-                <ul>
-                    <li><a href="mailto:p3210177@aueb.gr">p3210177@aueb.gr</a></li>
-                    <li><a href="https://www.instagram.com/serko_sam?igsh=NnFkaTl0a216ZWZk">@serko_sam</a></li>
+                <h3>Sarkis Samouelian</h3>
+                <ul class="simple_links">
+                    <li><a href="mailto:p3210177@aueb.gr">📧p3210177@aueb.gr</a></li>
+                    <li><a href="https://www.instagram.com/serko_sam?igsh=NnFkaTl0a216ZWZk">📱@serko_sam</a></li>
                 </ul>
             </div>
-        </div>
-        <div>
-            <h3>Dimitrios Toumazatos</h3>
             <div>
-                <ul>
-                    <li><a href="mailto:p3210199@aueb.gr">p3210199@aueb.gr</a></li>
-                    <li><a href="https://www.instagram.com/dimitris_toumazatos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">@dimitris_toumazatos</a></li>
+                <h3>Dimitrios Toumazatos</h3>
+                <ul class="simple_links">
+                    <li><a href="mailto:p3210199@aueb.gr">📧p3210199@aueb.gr</a></li>
+                    <li><a href="https://www.instagram.com/dimitris_toumazatos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">📱@dimitris_toumazatos</a></li>
                 </ul>
             </div>
         </div>

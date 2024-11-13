@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-Learning Website</title>
+        <link rel="stylesheet" href=".\css\styles.css">
+        <link href="..\Rescources\images\logo_header.webp" rel="icon">
+
+        <meta charset="UTF-8">
+        <meta name="description" content="E-Learning.">
+        <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
+
+        <style>
+            #about_us_list {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            #about_us_list li {
+                width: 90%;
+            }
+
+            img {
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="navbar">
+            <a href="index4.html">
+                <img class="logo" src="..\Rescources\images\logo_link.webp" alt="">
+            </a>
+
+            <ul>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </header>
+        <nav>
+            <a href="python_intro.html"><img src="..\Rescources\images\py_nav.png" alt="Python"></a>
+            <a href="cpp_intro.html"><img src="..\Rescources\images\cpp_nav.png" alt="C++"></a>
+            <a href="#"><img src="..\Rescources\images\prob_nav.webp" alt="Prob/ties"></a>
+            <a href="#"><img src="..\Rescources\images\ai_nav.png" alt="AI"></a>
+            <a href="#"><img src="..\Rescources\images\profile_nav.jpg" alt="Profile"></a>
+        </nav>
+        <main>
+            <button class="back-button" onclick="history.back()">Back</button>
+
+            <ul id="about_us_list">
+                <li>
+                    <img src="..\Rescources\images\about_us_dimitris.png" alt="" width="400" height="400">
+                    <ul>
+                        <li><p><b>Name: </b>Dimitrios Toumazatos</p></li>
+                        <li><p><b>Corporate E-mail: </b>p3210199@aueb.gr</p></li>
+                        <li><p><b>Personal E-mail: </b>di.toumazatos@gmail.com</p></li>
+                        <li><p><b>Occupation: </b>Computer Science Student at the Athens University of Economics and Business</p></li>
+                        <li><p><b>Phone: </b>1234567890</p></li>
+                        <li><p><b>Hobbies: </b>Painting, Basketball, Gym, Professional Beer Tasting</p></li>
+                        <li><p><b>About: </b>Dimitris has previously collaborated with Huawei in the "Seeds for the Future" educational program,
+                            conducted in partnership with AUEB. Additionally, in the summer of 2024, he completed an internship as a Software Development Engineer at Amazon Web Services (AWS) in Berlin.
+                            (Translation: Dimitris didn’t take a vacation and could use a little rest).
+                        </p></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <img src="..\Rescources\images\about_us_serko.jpg" alt="" width="400" height="400">
+                    <ul>
+                        <li><p><b>Name: </b>Sarkis Samouelian</p></li>
+                        <li><p><b>Corporate E-mail: </b>p3210177@aueb.gr</p></li>
+                        <li><p><b>Personal E-mail: </b>serkosam@gmail.com</p></li>
+                        <li><p><b>Occupation: </b>Computer Science Student at the Athens University of Economics and Business</p></li>
+                        <li><p><b>Phone: </b>1234567890</p></li>
+                        <li><p><b>Hobbies: </b>Professional Gambler, Gym, Professional Beer Tasting, Guitar</p></li>
+                        <li><p><b>About: </b>In March 2024, Serko went on a business trip to Belgrade,
+                            where he visited the casino and "cleaned them out",ending up with a profit of 150 euros.
+                        </p></li>
+                    </ul>
+                </li>
+            </ul>
+        </main>
+    </body>
+
+    <footer>
+        <p>Copyright &copy; 2024</p>
+        <div class="footer-info">
+            <div>
+                <h3>Sarkis Samouelian</h3>
+                <ul class="simple_links">
+                    <li><a href="mailto:p3210177@aueb.gr">📧p3210177@aueb.gr</a></li>
+                    <li><a href="https://www.instagram.com/serko_sam?igsh=NnFkaTl0a216ZWZk">📱@serko_sam</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Dimitrios Toumazatos</h3>
+                <ul class="simple_links">
+                    <li><a href="mailto:p3210199@aueb.gr">📧p3210199@aueb.gr</a></li>
+                    <li><a href="https://www.instagram.com/dimitris_toumazatos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">📱@dimitris_toumazatos</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</html>
