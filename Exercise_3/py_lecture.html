@@ -10,6 +10,16 @@
         <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
 
         <style>
+            #lecture-info {
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row;
+            }
+
+            #lecture-content {
+                margin-left: 10px;
+                max-width: 70%;
+            }
             ol h2 a {
                 text-decoration: none;
             }
@@ -38,72 +48,54 @@
             <button class="back-button" onclick="history.back()">Back</button>
 
             <h1>
-                Lecture
+                Learn Python - Full Course for Beginners [Tutorial]
             </h1>
 
-            <ul>
-                <li>
-                    <b>
-                        Title:
-                    </b>
-                    Learn Python - Full Course for Beginners [Tutorial]
-                </li>
-                <li>
-                    <b>
-                        Creator:
-                    </b>
-                    FreeCodeCamp.org
-                </li>
-                <li>
-                    <b>
-                        Creation Date:
-                    </b>
-                    11 July 2018
-                </li>
-                <li>
-                    <b>
-                        Rating:
-                    </b>
-                    👍1 million, 👎11 thousand
-                </li>
-            </ul>
+            <div id="lecture-info">
+                <div>
+                    <h3>Creator: FreeCodeCamp.org</h3>
+                    <h3>Creation Date: 11 July 2018</h3>
+                    <h3>Rating: 👍1 million, 👎11 thousand</h3>
 
-            <h2>
-                Lecture Description:
-            </h2>
-            <p>
-                This introductory lecture is designed for beginners eager to dive into Python programming. We'll start with a hands-on
-                installation of Python and the PyCharm IDE to ensure your development environment is fully equipped. After a quick
-                walkthrough of setting up your first "Hello World" program, you’ll learn to draw basic shapes and grasp fundamental
-                coding concepts.
+                    <h2>
+                        <a name="Q0">Contents</a>
+                    </h2>
 
-                The session will cover essential Python building blocks, including variables, data types, and operations with strings and
-                numbers. You'll practice interacting with users through input functions and will be introduced to the power of conditional
-                logic with if statements to make your programs dynamic and responsive.
+                    <ol class="simple_links">
+                        <li><a href="#Q1">Installing Python & PyCharm</a></li>
+                        <li><a href="#Q2">Setup & Hello World</a></li>
+                        <li><a href="#Q3">Drawing a Shape</a></li>
+                        <li><a href="#Q4">Variables & Data Types</a></li>
+                        <li><a href="#Q5">Working with Strings</a></li>
+                        <li><a href="#Q6">Working with Numbers</a></li>
+                        <li><a href="#Q7">Getting Input From Users</a></li>
+                        <li><a href="#Q8">If Statements</a></li>
+                        <li><a href="#Q9">Lists</a></li>
+                        <li><a href="#Q10">Tuples</a></li>
 
-                To round off, we’ll delve into working with fundamental data structures like lists and tuples, giving you the skills to
-                manage and organize data within your programs. This lecture is ideal for anyone new to coding, providing a strong foundation
-                in Python and programming concepts.
+                    </ol>
+                </div>
+                <div id="lecture-content">
+                    <h2>
+                        Lecture Description:
+                    </h2>
+                    <p>
+                        This introductory lecture is designed for beginners eager to dive into Python programming. We'll start with a hands-on
+                        installation of Python and the PyCharm IDE to ensure your development environment is fully equipped. After a quick
+                        walkthrough of setting up your first "Hello World" program, you’ll learn to draw basic shapes and grasp fundamental
+                        coding concepts.
 
-            </p>
-            <h2>
-                <a name="Q0">Contents</a>
-            </h2>
+                        The session will cover essential Python building blocks, including variables, data types, and operations with strings and
+                        numbers. You'll practice interacting with users through input functions and will be introduced to the power of conditional
+                        logic with if statements to make your programs dynamic and responsive.
 
-            <ol class="simple_links">
-                <li><a href="#Q1">Installing Python & PyCharm</a></li>
-                <li><a href="#Q2">Setup & Hello World</a></li>
-                <li><a href="#Q3">Drawing a Shape</a></li>
-                <li><a href="#Q4">Variables & Data Types</a></li>
-                <li><a href="#Q5">Working with Strings</a></li>
-                <li><a href="#Q6">Working with Numbers</a></li>
-                <li><a href="#Q7">Getting Input From Users</a></li>
-                <li><a href="#Q8">If Statements</a></li>
-                <li><a href="#Q9">Lists</a></li>
-                <li><a href="#Q10">Tuples</a></li>
+                        To round off, we’ll delve into working with fundamental data structures like lists and tuples, giving you the skills to
+                        manage and organize data within your programs. This lecture is ideal for anyone new to coding, providing a strong foundation
+                        in Python and programming concepts.
 
-            </ol>
-
+                    </p>
+                </div>
+            </div>
             <ol class="big-numbered-list">
                 <li>
                     <section>

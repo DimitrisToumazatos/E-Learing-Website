@@ -8,7 +8,6 @@ body {
     line-height: 22px;
     font-family: 'My_web_font', Fallback, sans-serif;
     background-color:rgb(193, 221, 249);
-    overflow-x: hidden;
     display: grid;
     grid:"h h h"
          "n b b"
