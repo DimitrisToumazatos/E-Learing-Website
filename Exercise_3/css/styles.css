@@ -227,11 +227,6 @@ footer ul {
     list-style-type: none;
 }
 
-footer a {
-    text-decoration: none;
-    color: black;
-}
-
 /* Sets footer colour and positioning */
 footer {
     background-color: #728fb4;
@@ -242,6 +237,12 @@ footer {
     margin-bottom: -1em;
     margin-left: -1em;
     margin-right: -1em;
-    margin-top: 5em;
-    padding: 1.5em;
+    margin-top: 2em;
+}
+
+.footer-info {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
