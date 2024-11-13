@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'My_web_font';
+    size-adjust: 110%;
+    src: local(Arial)
+}
+
 body {
-    font: 14px/1.6 'Open Sans' ,"Helvetica";
+    line-height: 22px;
+    font-family: 'My_web_font', Fallback, sans-serif;
     background-color:rgb(193, 221, 249);
     overflow-x: hidden;
     display: grid;
@@ -24,17 +31,18 @@ nav {
     gap: 15px;
     border-radius: 8px;
     margin: 10px;
+    margin-bottom: 20px;
     max-width: fit-content;
 }
 footer { grid-area: f; }
 
-nav a{
+nav a {
     margin-left: 7px;
     margin-right: 7px;
 }
 
 /* Sets navigation bar colour and positioning */
-.navbar{
+.navbar {
     background-color: #88b7f4;
     background-image: linear-gradient(to right, #88b7f4, #3a76c4 );
     display: flex;
@@ -90,11 +98,11 @@ nav img:hover {
 
 aside {
     position: relative;
+    max-height: fit-content;
     padding: 20px;
     border-radius: 8px;
     background-color: #fcce73;
     margin: 10px;
-    display: flex;
     gap: 15px;
 }
 

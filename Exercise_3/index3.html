@@ -10,32 +10,20 @@
         <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
         <style>
             body {
-                font: 14px/1.6 'Open Sans' ,"Helvetica";
                 background-color:rgb(193, 221, 249);
                 overflow-x: hidden;
                 display: grid;
                 grid:"h h h"
                      "n b c"
                      "f f f";
-                grid-template-columns: auto 1fr 20%;
+                grid-template-columns: 80px 1fr 240px;
             }
             header { grid-area: h; }
             main {
                 grid-area: b;
                 margin-left: 10px;
             }
-            nav {
-                grid-area: n;
-                background-color: #333;
-                color: #fff;
-                display: grid;
-                grid-template-rows: repeat(5, auto);
-                align-items: center;
-                padding: 10px 0;
-
-                border-radius: 8px;
-                margin: 10px;
-            }
+            
             aside { grid-area: c; }
             footer { grid-area: f; }
 
@@ -47,7 +35,6 @@
             <a href="index3.html">
                 <img class="logo" src="..\Rescources\images\logo_link.webp" alt="" >
             </a>
-            <!--<a class="logo_link" href="index.html">Tune Hogs</a> -->
 
             <ul>
                 <li><a href="categories.html">Categories</a></li>
