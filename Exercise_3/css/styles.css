@@ -56,7 +56,11 @@ nav a {
 }
 
 .navbar > ul {
+    width: 400px;
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .navbar li > a {
