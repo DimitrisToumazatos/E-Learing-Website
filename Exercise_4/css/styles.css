@@ -32,6 +32,7 @@ nav {
     margin: 10px;
     margin-bottom: 20px;
     max-width: fit-content;
+    max-height:fit-content;
 }
 footer { grid-area: f; }
 
