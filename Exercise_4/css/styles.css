@@ -1,248 +1,528 @@
-@font-face {
-    font-family: 'My_web_font';
-    size-adjust: 110%;
-    src: local(Arial)
+@media screen and (max-width: 2500px){
+
+    @font-face {
+        font-family: 'My_web_font';
+        size-adjust: 110%;
+        src: local(Arial)
+    }
+
+    body {
+        line-height: 22px;
+        font-family: 'My_web_font', Fallback, sans-serif;
+        background-color:rgb(193, 221, 249);
+        display: grid;
+        grid:"h h h"
+            "n b b"
+            "f f f";
+        grid-template-columns: 80px auto auto;
+    }
+    header { grid-area: h; }
+    main {
+        grid-area: b;
+        margin-left: 10px;
+    }
+    nav {
+        grid-area: n;
+        background-color: #333;
+        color: #fff;
+        display: grid;
+        grid-template-rows: repeat(5, 100px);
+        align-items: center;
+        padding: 10px 0;
+        gap: 15px;
+        border-radius: 8px;
+        margin: 10px;
+        margin-bottom: 20px;
+        max-width: fit-content;
+        max-height:fit-content;
+    }
+    footer { grid-area: f; }
+
+    nav a {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    /* Sets navigation bar colour and positioning */
+    .navbar {
+        background-color: #88b7f4;
+        background-image: linear-gradient(to right, #88b7f4, #3a76c4 );
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-width: 0cm;
+        padding: 1em;
+        margin-top: -1em;
+        margin-left: -1em;
+        margin-right: -1em;
+    }
+
+    .navbar > ul {
+        width: 400px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .navbar li > a {
+        position: relative; /* Needed for the pseudo-element positioning */
+        text-decoration: none;
+        font-weight: bold;
+        font-size: xx-large;
+        color: rgb(255, 255, 255);
+    }
+
+    /* Create the animated underline */
+    .navbar li > a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background-color: #ffffff;
+        transition: width 0.3s ease;
+    }
+
+    /* Increase the width of the underline on hover */
+    .navbar li > a:hover::after {
+        width: 100%; /* Full width underline */
+    }
+
+    nav img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: transform 0.3s;
+        margin-bottom: 5px;
+    }
+    nav img:hover {
+        transform: scale(1.1);
+    }
+
+    aside {
+        position: relative;
+        max-height: fit-content;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #fcce73;
+        margin: 10px;
+        gap: 15px;
+    }
+
+    /* Sets default header 1 colour and positioning */
+    h1 {
+        color: black;
+        text-align: center;
+        font-size: 30px;
+        margin: 1.5em;
+    }
+
+    /* Sets default header 2 colour and positioning */
+    h2 {
+        color: black;
+        text-align: left;
+        margin-left: 0.2em;
+    }
+
+    .logo {
+        max-width: 100%;
+        height: 150px;
+        mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    }
+
+    /* Back Button Styling */
+    .back-button {
+        margin-top: 10px;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        background: linear-gradient(135deg, #72f0c9, #007aff);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    /* Hover Effect */
+    .back-button:hover {
+        background: linear-gradient(135deg, #007aff, #72f0c9);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    }
+
+    /* List Styling */
+    .big-numbered-list {
+        counter-reset: section;
+        padding-right: 9px;
+        padding-left: 0;
+    }
+
+    .big-numbered-list > li {
+        list-style: none;
+        counter-increment: section;
+        position: relative;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 15px;
+    }
+
+    /* Custom number styling for big numbered lists */
+    .big-numbered-list > li::before {
+        content: counter(section) ". ";
+        font-weight: bold;
+        font-size: 21px;
+        position: relative;
+        left: 10px;
+        top: 17px;
+    }
+
+    /* Image Container Styling */
+    .floating_image {
+        right: 0;
+        position: relative;
+        float: right;
+        margin-left: 15px;
+        max-width: 400px;
+    }
+
+    .floating_image > img {
+        width: 100%;
+        height: auto;
+        float: right;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+
+    .floating_image > p {
+        float: right;
+    }
+
+    .simple_links a{
+        color: black;
+        text-decoration: none;
+    }
+
+    .simple_links a:hover{
+        text-decoration: underline;
+    }
+
+    .link_style {
+        list-style-type: none;
+        font-weight: bold;
+    }
+
+    .subcategories {
+        font-size: 17px;
+    }
+
+    footer ul {
+        list-style-type: none;
+    }
+
+    /* Sets footer colour and positioning */
+    footer {
+        background-color: #728fb4;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: -1em;
+        margin-left: -1em;
+        margin-right: -1em;
+        margin-top: 2em;
+    }
+
+    .footer-info {
+        width: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
 
-body {
-    line-height: 22px;
-    font-family: 'My_web_font', Fallback, sans-serif;
-    background-color:rgb(193, 221, 249);
-    display: grid;
-    grid:"h h h"
-         "n b b"
-         "f f f";
-    grid-template-columns: 80px auto auto;
-}
-header { grid-area: h; }
-main {
-    grid-area: b;
-    margin-left: 10px;
-}
-nav {
-    grid-area: n;
-    background-color: #333;
-    color: #fff;
-    display: grid;
-    grid-template-rows: repeat(5, 100px);
-    align-items: center;
-    padding: 10px 0;
-    gap: 15px;
-    border-radius: 8px;
-    margin: 10px;
-    margin-bottom: 20px;
-    max-width: fit-content;
-    max-height:fit-content;
-}
-footer { grid-area: f; }
+@media screen and (max-width: 1500px) {
 
-nav a {
-    margin-left: 7px;
-    margin-right: 7px;
-}
+    @font-face {
+        font-family: 'My_web_font';
+        size-adjust: 110%;
+        src: local(Arial)
+    }
 
-/* Sets navigation bar colour and positioning */
-.navbar {
-    background-color: #88b7f4;
-    background-image: linear-gradient(to right, #88b7f4, #3a76c4 );
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-width: 0cm;
-    padding: 1em;
-    margin-top: -1em;
-    margin-left: -1em;
-    margin-right: -1em;
-}
+    body {
+        line-height: 22px;
+        font-family: 'My_web_font', Fallback, sans-serif;
+        background-color:rgb(193, 221, 249);
+        display: grid;
+        grid-template-areas:
+            "h h"
+            "nav nav"
+            "m a"
+            "f f";
+        grid-template-columns: 1fr 240px; /* Main and Aside */
+        grid-template-rows: auto auto 1fr auto; /* Header, Nav, Content, Footer */
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+    aside { grid-area: a; }
 
-.navbar > ul {
-    width: 400px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+    nav {
+        grid-area: nav;
+        background-color: #333;
+        color: #fff;
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 0;
+        border-radius: 8px;
+        margin: 10px 0;
+        max-width: fit-content;
+        max-height:fit-content;
 
-.navbar li > a {
-    position: relative; /* Needed for the pseudo-element positioning */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: xx-large;
-    color: rgb(255, 255, 255);
-}
+    }
 
-/* Create the animated underline */
-.navbar li > a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: #ffffff;
-    transition: width 0.3s ease;
-}
+    header { grid-area: h; }
+    main {
+        grid-area: m;
+        margin-left: 10px;
+    }
+    /*nav {
+        grid-area: nav;
+        background-color: #333;
+        color: #fff;
+        display: grid;
+        grid-template-rows: repeat(5, 100px);
+        align-items: center;
+        padding: 10px 0;
+        gap: 15px;
+        border-radius: 8px;
+        margin: 10px;
+        margin-bottom: 20px;
+        max-width: fit-content;
+        max-height:fit-content;
+    }*/
+    footer { grid-area: f; }
 
-/* Increase the width of the underline on hover */
-.navbar li > a:hover::after {
-    width: 100%; /* Full width underline */
-}
+    nav a {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
 
-nav img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: transform 0.3s;
-    margin-bottom: 5px;
-}
-nav img:hover {
-    transform: scale(1.1);
-}
+    /* Sets navigation bar colour and positioning */
+    .navbar {
+        background-color: #88b7f4;
+        background-image: linear-gradient(to right, #88b7f4, #3a76c4 );
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-width: 0cm;
+        padding: 1em;
+        margin-top: -1em;
+        margin-left: -1em;
+        margin-right: -1em;
+    }
 
-aside {
-    position: relative;
-    max-height: fit-content;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #fcce73;
-    margin: 10px;
-    gap: 15px;
-}
+    .navbar > ul {
+        width: 400px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-/* Sets default header 1 colour and positioning */
-h1 {
-    color: black;
-    text-align: center;
-    font-size: 30px;
-    margin: 1.5em;
-}
+    .navbar li > a {
+        position: relative; /* Needed for the pseudo-element positioning */
+        text-decoration: none;
+        font-weight: bold;
+        font-size: xx-large;
+        color: rgb(255, 255, 255);
+    }
 
-/* Sets default header 2 colour and positioning */
-h2 {
-    color: black;
-    text-align: left;
-    margin-left: 0.2em;
-}
+    /* Create the animated underline */
+    .navbar li > a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background-color: #ffffff;
+        transition: width 0.3s ease;
+    }
 
-.logo {
-    max-width: 100%;
-    height: 150px;
-    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
-}
+    /* Increase the width of the underline on hover */
+    .navbar li > a:hover::after {
+        width: 100%; /* Full width underline */
+    }
 
-/* Back Button Styling */
-.back-button {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
-    background: linear-gradient(135deg, #72f0c9, #007aff);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
+    nav img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: transform 0.3s;
+        margin-bottom: 5px;
+    }
+    nav img:hover {
+        transform: scale(1.1);
+    }
 
-/* Hover Effect */
-.back-button:hover {
-    background: linear-gradient(135deg, #007aff, #72f0c9);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-}
+    aside {
+        position: relative;
+        max-height: fit-content;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #fcce73;
+        margin: 10px;
+        gap: 15px;
+    }
 
-/* List Styling */
-.big-numbered-list {
-    counter-reset: section;
-    padding-right: 9px;
-    padding-left: 0;
-}
+    /* Sets default header 1 colour and positioning */
+    h1 {
+        color: black;
+        text-align: center;
+        font-size: 30px;
+        margin: 1.5em;
+    }
 
-.big-numbered-list > li {
-    list-style: none;
-    counter-increment: section;
-    position: relative;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 15px;
-}
+    /* Sets default header 2 colour and positioning */
+    h2 {
+        color: black;
+        text-align: left;
+        margin-left: 0.2em;
+    }
 
-/* Custom number styling for big numbered lists */
-.big-numbered-list > li::before {
-    content: counter(section) ". ";
-    font-weight: bold;
-    font-size: 21px;
-    position: relative;
-    left: 10px;
-    top: 17px;
-}
+    .logo {
+        max-width: 100%;
+        height: 150px;
+        mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    }
 
-/* Image Container Styling */
-.floating_image {
-    right: 0;
-    position: relative;
-    float: right;
-    margin-left: 15px;
-    max-width: 400px;
-}
+    /* Back Button Styling */
+    .back-button {
+        margin-top: 10px;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        background: linear-gradient(135deg, #72f0c9, #007aff);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
 
-.floating_image > img {
-    width: 100%;
-    height: auto;
-    float: right;
-    margin-bottom: 15px;
-    border-radius: 4px;
-}
+    /* Hover Effect */
+    .back-button:hover {
+        background: linear-gradient(135deg, #007aff, #72f0c9);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    }
 
-.floating_image > p {
-    float: right;
-}
+    /* List Styling */
+    .big-numbered-list {
+        counter-reset: section;
+        padding-right: 9px;
+        padding-left: 0;
+    }
 
-.simple_links a{
-    color: black;
-    text-decoration: none;
-}
+    .big-numbered-list > li {
+        list-style: none;
+        counter-increment: section;
+        position: relative;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 15px;
+    }
 
-.simple_links a:hover{
-    text-decoration: underline;
-}
+    /* Custom number styling for big numbered lists */
+    .big-numbered-list > li::before {
+        content: counter(section) ". ";
+        font-weight: bold;
+        font-size: 21px;
+        position: relative;
+        left: 10px;
+        top: 17px;
+    }
 
-.link_style {
-    list-style-type: none;
-    font-weight: bold;
-}
+    /* Image Container Styling */
+    .floating_image {
+        right: 0;
+        position: relative;
+        float: right;
+        margin-left: 15px;
+        max-width: 400px;
+    }
 
-.subcategories {
-    font-size: 17px;
-}
+    .floating_image > img {
+        width: 100%;
+        height: auto;
+        float: right;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
 
-footer ul {
-    list-style-type: none;
-}
+    .floating_image > p {
+        float: right;
+    }
 
-/* Sets footer colour and positioning */
-footer {
-    background-color: #728fb4;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: -1em;
-    margin-left: -1em;
-    margin-right: -1em;
-    margin-top: 2em;
-}
+    .simple_links a{
+        color: black;
+        text-decoration: none;
+    }
 
-.footer-info {
-    width: 1000px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    .simple_links a:hover{
+        text-decoration: underline;
+    }
+
+    .link_style {
+        list-style-type: none;
+        font-weight: bold;
+    }
+
+    .subcategories {
+        font-size: 17px;
+    }
+
+    footer ul {
+        list-style-type: none;
+    }
+
+    /* Sets footer colour and positioning */
+    footer {
+        background-color: #728fb4;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: -1em;
+        margin-left: -1em;
+        margin-right: -1em;
+        margin-top: 2em;
+    }
+
+    .footer-info {
+        width: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
 }
