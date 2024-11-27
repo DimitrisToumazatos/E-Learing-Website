@@ -491,7 +491,7 @@
         list-style: none;
         counter-increment: section;
         position: relative;
-        padding: 20px;
+        padding: 10px;
         border: 1px solid #ddd;
         border-radius: 8px;
         background-color: #f9f9f9;
@@ -506,8 +506,8 @@
         font-weight: bold;
         font-size: 21px;
         position: relative;
-        left: 10px;
-        top: 17px;
+        left: 19px;
+        top: 18px;
     }
 
     /* Image Container Styling */
