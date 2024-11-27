@@ -164,6 +164,18 @@
         box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         transform: translateY(-2px);
     }
+
+    #lecture-info {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    #lecture-content {
+        margin-left: 10px;
+        max-width: 70%;
+    }
+
     #book_cover {
         float: left;
         height: auto;
@@ -450,6 +462,7 @@
 
     /* Sets default header 1 colour and positioning */
     h1 {
+        line-height: 30px;
         color: black;
         text-align: center;
         font-size: 30px;
@@ -496,11 +509,23 @@
         height: 300px;
         width: 100%;
     }
+
+    #lecture-info {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    #lecture-content {
+        margin-left: 10px;
+        max-width: 100%;
+    }
+
     #book_cover {
         float: left;
         height: auto;
         border-radius: 4px;
-        max-width: 450px;
+        max-width: 100%;
         margin-right: 30px;
     }
 
@@ -805,7 +830,7 @@
         float: left;
         height: auto;
         border-radius: 4px;
-        max-width: 450px;
+        max-width: 100%;
         margin-right: 30px;
     }
 
@@ -813,6 +838,17 @@
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
+    }
+
+    #lecture-info {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    #lecture-content {
+        margin-left: 10px;
+        max-width: 100%;
     }
 
     ol h2 a {
