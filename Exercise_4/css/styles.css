@@ -116,6 +116,11 @@
         gap: 15px;
     }
 
+    iframe {
+        height: 500px;
+        width: 100%;
+    }
+    
     /* Sets default header 1 colour and positioning */
     h1 {
         color: black;
@@ -435,7 +440,12 @@
         box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         transform: translateY(-2px);
     }
-
+    
+    iframe {
+        height: 300px;
+        width: 100%;
+    }
+    
     /* List Styling */
     .big-numbered-list {
         counter-reset: section;
@@ -686,6 +696,11 @@
         background: linear-gradient(135deg, #007aff, #72f0c9);
         box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         transform: translateY(-2px);
+    }
+
+    iframe {
+        height: 500px;
+        width: 100%;
     }
 
     /* List Styling */
