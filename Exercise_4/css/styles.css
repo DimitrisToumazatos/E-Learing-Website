@@ -686,7 +686,7 @@
     header { grid-area: h; }
     main {
         grid-area: m;
-        margin-left: 10px;
+        margin-left: 20px;
     }
 
     aside { grid-area: a; }
@@ -722,7 +722,7 @@
     }
 
     .navbar > ul {
-        width: 400px;
+        width: 500px;
         list-style-type: none;
         display: flex;
         flex-direction: row;
@@ -780,7 +780,7 @@
     h1 {
         color: black;
         text-align: center;
-        font-size: 30px;
+        font-size: 50px;
         margin: 1.5em;
     }
 
@@ -840,10 +840,18 @@
         flex-direction: column;
     }
 
+    #book-info ol{
+        margin-left: 50px;
+    }
+
     #lecture-info {
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
+    }
+
+    #lecture-info ol {
+        margin-left: 50px;
     }
 
     #lecture-content {
