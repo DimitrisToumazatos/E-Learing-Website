@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-Learning Website</title>
+        <link rel="stylesheet" href=".\css\styles.css">
+        <link href="..\Rescources\images\logo_header.webp" rel="icon">
+
+
+        <meta charset="UTF-8">
+        <meta name="description" content="E-Learning.">
+        <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
+
+
+    </head>
+
+    <body>
+        <header class="navbar">
+            <a href="index5.html">
+                <img class="logo" src="..\Rescources\images\logo_link.webp" alt="">
+            </a>
+
+            <ul>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+
+        </header>
+
+        <nav>
+            <a href="python_intro.html"><img src="..\Rescources\images\py_nav.png" alt="Python"></a>
+            <a href="cpp_intro.html"><img src="..\Rescources\images\cpp_nav.png" alt="C++"></a>
+            <a href="#"><img src="..\Rescources\images\prob_nav.webp" alt="Prob/ties"></a>
+            <a href="#"><img src="..\Rescources\images\ai_nav.png" alt="AI"></a>
+            <a href="#"><img src="..\Rescources\images\profile_nav.jpg" alt="Profile"></a>
+        </nav>
+
+        <main class="simple_links">
+            <button class="back-button" onclick="history.back()">Back</button>
+
+            <ul id="category-grid">
+                <li>
+                    <section>
+                        <h2>
+                            Python
+                        </h2>
+                        <img src="..\Rescources\images\categories_python.png" alt="" width="200" height="200">
+                        <ul class="subcategories">
+                            <li><a href="python_intro.html">Introduction to Python</a></li>
+                            <li><a href="#">Object oriented programming</a></li>
+                            <li><a href="#">Parallel programming</a></li>
+                            <li><a href="#">Using data bases</a></li>
+                        </ul>
+                    </section>
+                </li>
+
+                <li>
+                    <section>
+                        <h2>
+                            C++
+                        </h2>
+                        <img src="..\Rescources\images\categories_cpp.svg" alt="" width="200" height="200">
+                        <ul class="subcategories">
+                            <li><a href="cpp_intro.html">Introduction to C++</a></li>
+                            <li><a href="#">Object oriented programming</a></li>
+                            <li><a href="#">Using memory efficiently</a></li>
+                            <li><a href="#">Parallel programming</a></li>
+                        </ul>
+                    </section>
+                </li>
+
+                <li>
+                    <section>
+                        <h2>
+                            Probability Theory
+                        </h2>
+                        <img src="..\Rescources\images\categories_pt.png" alt="" width="250" height="200">
+                        <ul class="subcategories">
+                            <li><a href="#">Introduction to Probability Theory</a></li>
+                            <li><a href="#">Probability Theorems</a></li>
+                            <li><a href="#">Law of large numbers</a></li>
+                            <li><a href="#">Using Probabilities in python</a></li>
+                        </ul>
+                    </section>
+                </li>
+
+                <li>
+                    <section>
+                        <h2>
+                            Artificial Intelligence
+                        </h2>
+                        <img src="..\Rescources\images\categories_ai.jpg" alt="" width="250" height="200">
+                        <ul class="subcategories">
+                            <li><a href="#">Introduction to Artificial Intelligence</a></li>
+                            <li><a href="#">Introduction to logic</a></li>
+                            <li><a href="#">Machine Learning algorithms</a></li>
+                            <li><a href="#">Machine Learning algorithms in python</a></li>
+                        </ul>
+                    </section>
+                </li>
+
+            </ul>
+        </main>
+        <aside>
+            <article>
+                <h3>
+                    Create an Account!
+                </h3>
+                <p>
+                    You have the option to create an account on our website and get personalized messages about
+                    new content and news that align with your interests. Join now!
+                </p>
+                <form action="user.html">
+                    <button class="fun-button" type="submit">Join Us Now</button>
+                </form>
+            </article>
+        </aside>
+    </body>
+
+    <footer>
+        <p>Copyright &copy; 2024</p>
+        <div class="footer-info">
+            <div>
+                <h3>Sarkis Samouelian</h3>
+                <ul class="simple_links">
+                    <li><a href="mailto:p3210177@aueb.gr">📧p3210177@aueb.gr</a></li>
+                    <li><a href="https://www.instagram.com/serko_sam?igsh=NnFkaTl0a216ZWZk">📱@serko_sam</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Dimitrios Toumazatos</h3>
+                <ul class="simple_links">
+                    <li><a href="mailto:p3210199@aueb.gr">📧p3210199@aueb.gr</a></li>
+                    <li><a href="https://www.instagram.com/dimitris_toumazatos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">📱@dimitris_toumazatos</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</html>

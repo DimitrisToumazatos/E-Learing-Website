@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-Learning Website</title>
+        <link rel="stylesheet" href=".\css\styles.css">
+        <link href="..\Rescources\images\logo_header.webp" rel="icon">
+
+        <meta charset="UTF-8">
+        <meta name="description" content="E-Learning.">
+        <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
+
+    </head>
+
+    <body>
+        <header class="navbar">
+            <a href="index5.html">
+                <img class="logo" src="..\Rescources\images\logo_link.webp" alt="">
+            </a>
+
+            <ul>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </header>
+        <nav>
+            <a href="python_intro.html"><img src="..\Rescources\images\py_nav.png" alt="Python"></a>
+            <a href="cpp_intro.html"><img src="..\Rescources\images\cpp_nav.png" alt="C++"></a>
+            <a href="#"><img src="..\Rescources\images\prob_nav.webp" alt="Prob/ties"></a>
+            <a href="#"><img src="..\Rescources\images\ai_nav.png" alt="AI"></a>
+            <a href="#"><img src="..\Rescources\images\profile_nav.jpg" alt="Profile"></a>
+        </nav>
+        <main>
+            <button class="back-button" onclick="history.back()">Back</button>
+
+            <h1>Thinkpython2</h1>
+            <div id="book-info">
+                <div>
+                    <h3>Author: Allen Downey</h3>
+                    <h3>Release date : 2016</h3>
+                    <h3>Rating : 4,6/5🌟 (602)</h3>
+                    <img id="book_cover" src="..\Rescources\images\thinkpython.png" alt="">
+                </div>
+                <div>
+                    <p>
+                        <p>If you want to learn how to program, working with Python is an excellent way to start.
+                        This hands-on guide takes you through the language a step at a time, beginning with basic programming concepts before moving on to functions, recursion, data structures, and object-oriented design. This second edition and its supporting code have been updated for Python 3.
+
+                        Explore interface design, data structures, and GUI-based programs through case studies</p>
+                        <p>Through exercises in each chapter, you'll try out programming concepts as you learn them. Think Python is ideal for students at the high school or college level, as well as self-learners, home-schooled students, and professionals who need to learn programming basics. Beginners just getting their feet wet will learn how to start with Python in a browser.</p>
+
+                        <ul><li>Start with the basics, including language syntax and semantics</li>
+                            <li>Get a clear definition of each programming concept</li>
+                            <li>Learn about values, variables, statements, functions, and data structures in a logical progression</li>
+                            <li>Discover how to work with files and databases</li>
+                            <li>Understand objects, methods, and object-oriented programming</li>
+                            <li> Use debugging techniques to fix syntax, runtime, and semantic errors</li></ul>
+                    </p>
+
+                    <h2>
+                        <a name="Q0">Contents</a>
+                    </h2>
+
+                    <ol class="simple_links">
+                        <li><a href="#Q1">The way of the program</a></li>
+                        <li><a href="#Q2">Variables, expressions and statements</a></li>
+                        <li><a href="#Q3">Functions</a></li>
+                        <li><a href="#Q4">Case study: interface design</a></li>
+                        <li><a href="#Q5">Conditionals and recursions</a></li>
+                        <li><a href="#Q6">Fruitful functions</a></li>
+                        <li><a href="#Q7">Iteration</a></li>
+                        <li><a href="#Q8">Strings</a></li>
+                        <li><a href="#Q9">Case study: word play</a></li>
+                        <li><a href="#Q10">Lists</a></li>
+
+                    </ol>
+                </div>
+            </div>
+
+            <ol class="big-numbered-list">
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q1">The way of the program</a><a href="#Q0">🔝</a>
+                        </h2>
+                        <div>
+                            <p>
+                                <div class="floating_image">
+                                    <img src="..\Rescources\images\py1.jpg" alt="" >
+                                    <p><i>A simple python code.</i></p>
+                                </div>
+                                The goal of this book is to teach you to think like a computer scientist. This way of thinking combines some of the best features of mathematics, engineering, and natural science.
+                                Like mathematicians, computer scientists use formal languages to denote ideas (specifically computations). Like engineers, they design things, assembling components into systems and evaluating tradeoffs among alternatives. Like scientists, they observe the behavior of complex systems, form hypotheses, and test predictions.
+                                The single most important skill for a computer scientist is problem solving. Problem solving means the ability to formulate problems, think creatively about solutions, and express
+                                a solution clearly and accurately. As it turns out, the process of learning to program is an
+                                excellent opportunity to practice problem-solving skills. That’s why this chapter is called,
+                                “The way of the program”.
+                                On one level, you will be learning to program, a useful skill by itself. On another level, you
+                                will use programming as a means to an end. As we go along, that end will become clearer.
+                            </p>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q2">Variables, expressions and statements</a><a href="#Q0">🔝</a>
+                        </h2>
+
+                        <div class="floating_image">
+                            <img src="..\Rescources\images\py2.jpg" alt="">
+                            <p><i>Different python variables.</i></p>
+                        </div>
+
+                        <p>
+                            One of the most powerful features of a programming language is the ability to manipulate
+                            variables. A variable is a name that refers to a value.
+                            2.1 Assignment statements
+                            An assignment statement creates a new variable and gives it a value:
+                            >>> message = 'And now for something completely different'
+                            >>> n = 17
+                            >>> pi = 3.1415926535897932
+                            This example makes three assignments. The first assigns a string to a new variable named
+                            message; the second gives the integer 17 to n; the third assigns the (approximate) value of
+                            π to pi.
+                            A common way to represent variables on paper is to write the name with an arrow pointing
+                            to its value. This kind of figure is called a state diagram because it shows what state each
+                            of the variables is in (think of it as the variable’s state of mind). Figure 2.1 shows the result
+                            of the previous example.
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q3">Functions</a><a href="#Q0">🔝</a>
+                        </h2>
+                        <div class="floating_image">
+                            <img src="..\Rescources\images\py3.png" alt="">
+                            <p><i>Simple addition function.</i></p>
+                        </div>
+                        <p>
+                            In the context of programming, a function is a named sequence of statements that performs
+                            a computation. When you define a function, you specify the name and the sequence of
+                            statements. Later, you can “call” the function by name.
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q4">Case study: interface design</a><a href="#Q0">🔝</a>
+                        </h2>
+                        <div class="floating_image">
+                            <img src="..\Rescources\images\py4.webp" alt="">
+                            <p><i>Simple interface design.</i></p>
+                        </div>
+                        <p>
+                            This chapter presents a case study that demonstrates a process for designing functions that
+                            work together.
+                            It introduces the turtle module, which allows you to create images using turtle graphics.
+                            The turtle module is included in most Python installations, but if you are running Python
+                            using PythonAnywhere, you won’t be able to run the turtle examples (at least you couldn’t
+                            when I wrote this).
+                            If you have already installed Python on your computer, you should be able to run the
+                            examples. Otherwise, now is a good time to install. I have posted instructions at http:
+                            //tinyurl.com/thinkpython2e.
+                            Code examples from this chapter are available from https://thinkpython.com/code/
+                            polygon.py.
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q5">Conditionals and recursions</a><a href="#Q0">🔝</a>
+                        </h2>
+                        <div class="floating_image">
+                            <img src="..\Rescources\images\py5.webp" alt="">
+                            <p><i>Recursion.</i></p>
+                        </div>
+                        <p>
+                            The primary focus of this chapter is on the if statement, an essential programming structure that enables a
+                            program to execute specific code blocks based on certain conditions or the program's current state. By using
+                            if statements, you can create dynamic and responsive programs that behave differently depending on the values
+                            of variables or inputs, providing greater flexibility and control. Before diving into the details of conditional
+                            statements, however, this chapter will first introduce two foundational operators: floor division and modulus.
+                            Floor division allows you to divide numbers while discarding any remainder, giving you only the whole number
+                            result, which is useful in many programming scenarios where integer results are needed. The modulus operator,
+                            on the other hand, returns the remainder of a division, which can be extremely helpful for tasks like
+                            determining if a number is even or odd or performing cyclic operations. By understanding these operators, you’ll
+                            be well-prepared to write conditional statements that can handle a variety of real-world problems effectively.
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q6">Fruitful functions</a><a href="#Q0">🔝</a>
+                        </h2>
+                        <div class="floating_image">
+                            <img src="..\Rescources\images\py6.jpg" alt="">
+                            <p><i>A fruitful function.</i></p>
+                        </div>
+                        <p>
+                            Many of the Python functions we have used, such as the math functions, produce return
+                            values. But the functions we’ve written are all void: they have an effect, like printing a
+                            value or moving a turtle, but they don’t have a return value. In this chapter you will learn
+                            to write fruitful functions.
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q7">Iteration</a><a href="#Q0">🔝</a>
+                        </h2>
+                        <div id="problematic_chapter_image">
+                            <img src="..\Rescources\images\py7.jpg" alt="">
+                            <p><i>Iteration</i></p>
+                        </div>
+                        <p>
+                            This chapter is about iteration, which is the ability to run a block of statements repeatedly.
+                            We saw a kind of iteration, using recursion, in Section 5.8. We saw another kind, using a
+                            for loop, in Section 4.2. In this chapter we’ll see yet another kind, using a while statement.
+                            But first I want to say a little more about variable assignment.
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q8">Strings</a><a href="#Q0">🔝</a>
+                        </h2>
+                        <div class="floating_image">
+                            <img src="..\Rescources\images\py8.jpg" alt="">
+                            <p><i>Strings in python.</i></p>
+                        </div>
+                        <p>
+                            Strings are not like integers, floats, and booleans. A string is a sequence, which means it is
+                            an ordered collection of other values. In this chapter you’ll see how to access the characters
+                            that make up a string, and you’ll learn about some of the methods strings provide.
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q9">Case study: word play</a><a href="#Q0">🔝</a>
+                        </h2>
+                        <div class="floating_image">
+                            <img src="..\Rescources\images\py9.jpg" alt="">
+                            <p><i>Example of word play.</i></p>
+                        </div>
+                        <p>
+                            This chapter presents the second case study, which involves solving word puzzles by
+                            searching for words that have certain properties. For example, we’ll find the longest palindromes in English and search for words whose letters appear in alphabetical order. And
+                            I will present another program development plan: reduction to a previously solved problem.
+                        </p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h2>
+                            <a name="Q10">Lists</a><a href="#Q0">🔝</a>
+                        </h2>
+                        <div class="floating_image">
+                            <img src="..\Rescources\images\py10.png" alt="">
+                            <p><i>Lists in python.</i></p>
+                        </div>
+                        <p>
+                            This chapter introduces one of the most powerful and frequently used built-in types in Python: lists. Lists are
+                            essential tools in Python because they allow you to store collections of items, whether they are numbers, strings,
+                            or even other lists. You’ll discover how versatile lists can be, enabling you to group data in an organized way,
+                            access elements by their position, and modify the contents as needed. In addition to lists, you will also delve
+                            deeper into the concept of objects in Python. This exploration includes understanding how objects hold data and
+                            how Python uses references to manage them. An object can have multiple names, or variables, that refer to it,
+                            which can lead to changes that affect all references to the object. By studying lists and object behavior,
+                            you’ll gain insights into how Python handles data, memory, and the ways different variables can point to the
+                            same object, impacting program logic in subtle but important ways.
+                        </p>
+                    </section>
+                </li>
+
+            </ol>
+        </main>
+        <aside>
+            <article>
+                <h3>
+                    Create an Account!
+                </h3>
+                <p>
+                    You have the option to create an account on our website and get personalized messages about
+                    new content and news that align with your interests. Join now!
+                </p>
+                <form action="user.html">
+                    <button class="back-button" type="submit">Join Us Now</button>
+                </form>
+            </article>
+        </aside>
+    </body>
+
+    <footer>
+        <p>Copyright &copy; 2024</p>
+        <div class="footer-info">
+            <div>
+                <h3>Sarkis Samouelian</h3>
+                <ul class="simple_links">
+                    <li><a href="mailto:p3210177@aueb.gr">📧p3210177@aueb.gr</a></li>
+                    <li><a href="https://www.instagram.com/serko_sam?igsh=NnFkaTl0a216ZWZk">📱@serko_sam</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Dimitrios Toumazatos</h3>
+                <ul class="simple_links">
+                    <li><a href="mailto:p3210199@aueb.gr">📧p3210199@aueb.gr</a></li>
+                    <li><a href="https://www.instagram.com/dimitris_toumazatos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">📱@dimitris_toumazatos</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</html>
