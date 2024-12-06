@@ -114,7 +114,8 @@
                     </div>
                     <div>
                         <label for="password2">Password:</label>
-                        <input type="password" id="password2" name="password2" autocomplete="off" placeholder="Re-enter your password" title="Re-enter the same password as above" required>
+                        <input type="password" id="password2" name="password2" autocomplete="off" placeholder="Re-enter your password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" title="Password must be at least 8 characters long and include at least one lowercase letter, one uppercase letter, one number, and one special character (@$!%*?&)"
+                        required>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -188,7 +189,7 @@
                     </div>
 
                     <label for="languages">Languages Known:</label>
-                    <div id="languages">
+                    <div id="lang">
                     <input type="checkbox" id="english" name="languages" value="english">
                     <label for="english">English</label><br>
 
@@ -225,7 +226,8 @@
                 </div>
             </form>
 
-            <p id="error-message" style="color: red; display: none;">**Passwords do not match.</p>
+            <p id="pass-error" style="color: red; display: none;">**Passwords do not match.</p>
+            <p id="lang-error" style="color: red; display: none;">**Select at least one language.</p>
         </main>
         <aside>
             <article>
