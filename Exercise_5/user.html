@@ -36,47 +36,62 @@
         <main>
             <form>
                 <fieldset>
-                    <legend> Personal Data</legend>
+                    <legend>Personal Data</legend>
                     <div>
-                        <label for="fullName">Full Name:</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Ex. Sarkis" required>
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" autocomplete="firstname" placeholder="Ex. Sarkis" pattern="[A-Za-z]+" title="Only letters (A-Z or a-z) are allowed" required>
+                    </div>
+                    <div>
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" autocomplete="lastname" placeholder="Ex. Toumazatos" pattern="[A-Za-z]+" title="Only letters (A-Z or a-z) are allowed" required>
                     </div>
                     <div>
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Ex. Toumazatos" required>
+                        <input type="email" id="email" name="email" autocomplete="email" list="user_emails" placeholder="Ex. bober@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Enter a valid email address (e.g., example@gmail.com)" required>
+                        <datalist id="user_emails">
+                            <option>abc@gmail.com</option>
+                            <option>def@yahoo.gr</option>
+                        </datalist>
                     </div>
                     <div>
                         <label for="address">Home Address:</label>
-                        <input type="text" id="address" name="address" placeholder="28th October 76,Athens , 10434" required>
+                        <input type="text" id="address" name="address" placeholder="28th October 76, Athens, 10434" pattern="^[A-Za-z0-9\s,.-]+$" title="Enter your home address (e.g., Street Name, City, ZIP Code)" required>
                     </div>
                     <div>
                         <label for="birthDate">Date of Birth:</label>
-                        <input type="date" id="birthDate" name="birthDate" required>
+                        <input type="date" id="birthDate" name="birthDate" min="1920-01-01" max="2010-01-01" title="Date must be between 1920-01-01 and 2010-01-01" required>
                     </div>
                     <div>
                         <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="00302100000000" pattern="0030[0-9]{10}" required>
+                        <input type="tel" id="phone" name="phone" autocomplete="phone" list="user_phone" placeholder="00302100000000" pattern="0030210[0-9]{7}" title="Phone number must start with 0030210 followed by 7 digits" required>
+                        <datalist id="user_phone">
+                            <option>00302100000000</option>
+                        </datalist>
                     </div>
                     <div>
                         <label for="pphone">Personal Phone Number:</label>
-                        <input type="tel" id="pphone" name="pphone" placeholder="00306911111111" pattern="0030[0-9]{10}" required>
+                        <input type="tel" id="pphone" name="pphone" autocomplete="pphone" list="user_pphone" placeholder="00306911111111" pattern="003069[0-9]{8}" title="Phone number must start with 003069 followed by 8 digits" required>
+                        <datalist id="user_pphone">
+                            <option>00306900000000</option>
+                        </datalist>
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Login Data</legend>
                     <div>
                         <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" placeholder="Ex. SarkToum" required>
+                        <input type="text" id="username" name="username" placeholder="Ex. SarkToum" pattern="[A-Za-z0-9]+" title="Username can include letters (A-Z or a-z) and numbers only" required>
                     </div>
                     <div>
                         <label for="password1">Password:</label>
-                        <input type="password" id="password1" name="password1" placeholder="Enter your password" required>
+                        <input type="password" id="password1" name="password1" autocomplete="off" placeholder="Enter your password" title="Enter a secure password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"
+                        title="Password must be at least 8 characters long and include at least one lowercase letter, one uppercase letter, one number, and one special character (@$!%*?&)"
+                        required>
                     </div>
                     <div>
                         <label for="password2">Password:</label>
-                        <input type="password" id="password2" name="password2" placeholder="Re-enter your password" required>
+                        <input type="password" id="password2" name="password2" autocomplete="off" placeholder="Re-enter your password" title="Re-enter the same password as above" required>
                     </div>
-
                 </fieldset>
                 <fieldset>
                     <legend> News Letter </legend>
@@ -92,7 +107,7 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend> Lets get to konw eachother! </legend>
+                    <legend> Lets get to know eachother! </legend>
                     <div>
                         <label for="educationLevel">Highest Education Level:</label>
                         <select id="educationLevel" name="educationLevel" required>
@@ -156,10 +171,10 @@
                     <input type="checkbox" id="greek" name="languages" value="greek">
                     <label for="greek">Greek</label><br>
 
-                    <input type="checkbox" id="spanish" name="languages" value="armenian">
+                    <input type="checkbox" id="armenian" name="languages" value="armenian">
                     <label for="armenian">Armenian</label><br>
 
-                    <input type="checkbox" id="french" name="languages" value="albanian">
+                    <input type="checkbox" id="albanian" name="languages" value="albanian">
                     <label for="albanian">Albanian</label><br>
 
                     <input type="checkbox" id="german" name="languages" value="german">
