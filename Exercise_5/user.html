@@ -3,11 +3,13 @@
     <head>
         <title>E-Learning Website</title>
         <link rel="stylesheet" href=".\css\styles.css">
+        <script type="text/javascript" src=".\js\validationAPI.js"/>
         <link href="..\Rescources\images\logo_header.webp" rel="icon">
 
         <meta charset="UTF-8">
         <meta name="description" content="E-Learning.">
         <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
+        <script></script>
         <style>
             input:placeholder-shown {
                 border: 1px solid black;
@@ -26,6 +28,11 @@
             /* Red border if the input is invalid due to constraints (min/max) */
             input[type="date"]:invalid:not(:placeholder-shown) {
                 border: 1px solid rgb(0, 0, 0);
+            }
+
+            input[type="submit"] {
+                color: initial; /* Default color */
+                border: 1px solid black; /* Default border */
             }
         </style>
     </head>
