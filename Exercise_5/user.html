@@ -58,7 +58,7 @@
         </nav>
 
         <main>
-            <form>
+            <form id="form">
                 <fieldset>
                     <legend>Personal Data</legend>
                     <div>
@@ -133,7 +133,7 @@
                 <fieldset>
                     <legend> Lets get to know eachother! </legend>
                     <div>
-                        <label for="educationLevel">Highest Education Level:</label>
+                        <label for="educationLevel">Current Education Level:</label>
                         <select id="educationLevel" name="educationLevel" required>
                             <option value="" disabled selected>Select an option</option>
                             <option value="highschool">High School</option>
@@ -224,6 +224,8 @@
                     <button type="reset">Reset</button>
                 </div>
             </form>
+
+            <p id="error-message" style="color: red; display: none;">**Passwords do not match.</p>
         </main>
         <aside>
             <article>
