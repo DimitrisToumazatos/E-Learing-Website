@@ -9,7 +9,24 @@
         <meta name="description" content="E-Learning.">
         <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
         <style>
+            input:placeholder-shown {
+                border: 1px solid black;
+            }
 
+            /* Red outline for invalid inputs (once they have a value) */
+            input:invalid:not(:placeholder-shown) {
+                border: 2.5px solid red;
+            }
+
+            /* Optional: Green outline for valid inputs */
+            input:valid {
+                border: 3px solid green;
+            }
+
+            /* Red border if the input is invalid due to constraints (min/max) */
+            input[type="date"]:invalid:not(:placeholder-shown) {
+                border: 1px solid rgb(0, 0, 0);
+            }
         </style>
     </head>
 
