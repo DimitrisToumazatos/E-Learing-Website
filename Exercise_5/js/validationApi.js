@@ -47,6 +47,10 @@ function checkEducationLevelHighOrOtherThenTopicOther(event) {
 
     if ((valueLevel == "highschool" || valueLevel == "other") && valueTopic !== "other" ){
         errorMessage.style.display = 'block';
+        educationlevel.style.border = '1.5px solid red';
+        educationlevel.style.outline = '1.6px solid red';
+        educationtopic.style.border = '1.5px solid red';
+        educationtopic.style.outline = '1.6px solid red';
         event.preventDefault();
     }else {
         errorMessage.style.display = 'none';

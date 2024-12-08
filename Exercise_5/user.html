@@ -11,147 +11,7 @@
         <meta name="author" content="Sarkis Samouelian, Dimitrios Toumazatos">
         <script></script>
         <style>
-            input:placeholder-shown {
-                border: 1px solid black;
-            }
-
-            /* Red outline for invalid inputs (once they have a value) */
-            input:invalid:not(:placeholder-shown) {
-                border: 2.5px solid red;
-            }
-
-            /* Optional: Green outline for valid inputs */
-            input:valid {
-                border: 3px solid green;
-            }
-
-            /* Red border if the input is invalid due to constraints (min/max) */
-            input[type="date"]:invalid:not(:placeholder-shown) {
-                border: 1px solid rgb(0, 0, 0);
-            }
-
-            input[type="submit"] {
-                color: initial; /* Default color */
-                border: 1px solid black; /* Default border */
-            }
-
-                        
-            /* Form Styling */
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            fieldset {
-                border: 2.5px solid #2d2d2d;
-                border-radius: 8px;
-                padding: 15px;
-                margin: 0;
-            }
-
-            legend {
-                font-weight: bold;
-                font-size: 1.1em;
-                color: #2d2d2d;
-                padding: 0 10px;
-            }
-
-            label {
-                font-weight: bold;
-                display: block;
-                margin-bottom: 5px;
-                color: #2d2d2d;
-            }
-
-            input, select, textarea {
-                width: 100%;
-                padding: 10px;
-                margin: 5px 0 15px;
-                border: 1px solid #2d2d2d;
-                border-radius: 5px;
-                font-size: 1em;
-                box-sizing: border-box;
-                transition: border-color 0.3s ease;
-            }
-
-            input:focus, select:focus, textarea:focus {
-                border-color: #247edf;
-                outline: none;
-            }
-
-            textarea {
-                resize: vertical;
-            }
-
-            input[type="checkbox"] {
-                width: auto;
-                margin-right: 10px;
-            }
-
-            details {
-                margin-top: 10px;
-                font-size: 0.9em;
-            }
-
-            details summary {
-                font-weight: bold;
-                cursor: pointer;
-            }
-
-            details p {
-                margin-top: 10px;
-                color: #666;
-            }
-
-            /* Buttons */
-            input[type="submit"], button[type="reset"] {
-                display: inline-block;
-                background: #247edf;
-                color: #fff;
-                border: none;
-                padding: 10px 15px;
-                border-radius: 5px;
-                font-size: 1em;
-                cursor: pointer;
-                transition: background 0.3s ease;
-            }
-
-            input[type="submit"]:hover, button[type="reset"]:hover {
-                background: #0056b3;
-            }
-
-            button[type="reset"] {
-                background: #6c757d;
-            }
-
-            button[type="reset"]:hover {
-                background: #5a6268;
-            }
-
-            /* Error Messages */
-            #pass-error, #lang-error, #edu-error {
-                color: red;
-                font-size: 0.9em;
-                display: none;
-                margin-top: -10px;
-                margin-bottom: 10px;
-            }
-
-            /* Additional Styling */
-            #lang {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-
-            #lang label {
-                margin-right: 10px;
-            }
-
-            #lang input[type="checkbox"] + label {
-                margin-bottom: 0;
-            }
+            
         </style>
     </head>
 
@@ -181,11 +41,11 @@
                     <legend>Personal Data</legend>
                     <div>
                         <label for="firstname">First Name:</label>
-                        <input type="text" id="firstname" name="firstname" autocomplete="firstname" placeholder="Ex. Sarkis" pattern="[A-Za-z]+" title="Only letters (A-Z or a-z) are allowed" required>
+                        <input type="text" id="firstname" name="firstname" autocomplete="text" placeholder="Ex. Sarkis" pattern="[A-Za-z]+" title="Only letters (A-Z or a-z) are allowed" required>
                     </div>
                     <div>
                         <label for="lastname">Last Name:</label>
-                        <input type="text" id="lastname" name="lastname" autocomplete="lastname" placeholder="Ex. Toumazatos" pattern="[A-Za-z]+" title="Only letters (A-Z or a-z) are allowed" required>
+                        <input type="text" id="lastname" name="lastname" autocomplete="text" placeholder="Ex. Toumazatos" pattern="[A-Za-z]+" title="Only letters (A-Z or a-z) are allowed" required>
                     </div>
                     <div>
                         <label for="email">Email:</label>
@@ -197,7 +57,7 @@
                     </div>
                     <div>
                         <label for="address">Home Address:</label>
-                        <input type="text" id="address" name="address" placeholder="28th October 76, Athens, 10434" pattern="^[A-Za-z0-9\s,.-]+$" title="Enter your home address (e.g., Street Name, City, ZIP Code)" required>
+                        <input type="text" id="address" name="address" autocomplete="text" placeholder="28th October 76, Athens, 10434" pattern="^[A-Za-z0-9\s,.-]+$" title="Enter your home address (e.g., Street Name, City, ZIP Code)" required>
                     </div>
                     <div>
                         <label for="birthDate">Date of Birth:</label>
@@ -205,14 +65,14 @@
                     </div>
                     <div>
                         <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone" autocomplete="phone" list="user_phone" placeholder="+302100000000" pattern="\+30210[0-9]{7}" title="Phone number must start with +30210 followed by 7 digits" required>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" list="user_phone" placeholder="+302100000000" pattern="\+30210[0-9]{7}" title="Phone number must start with +30210 followed by 7 digits" required>
                         <datalist id="user_phone">
                             <option>+302100000000</option>
                         </datalist>
                     </div>
                     <div>
                         <label for="pphone">Personal Phone Number:</label>
-                        <input type="tel" id="pphone" name="pphone" autocomplete="pphone" list="user_pphone" placeholder="+306911111111" pattern="\+3069[0-9]{8}" title="Phone number must start with +3069 followed by 8 digits" required>
+                        <input type="tel" id="pphone" name="pphone" autocomplete="tel" list="user_pphone" placeholder="+306911111111" pattern="\+3069[0-9]{8}" title="Phone number must start with +3069 followed by 8 digits" required>
                         <datalist id="user_pphone">
                             <option>+306900000000</option>
                         </datalist>
@@ -222,7 +82,7 @@
                     <legend>Login Data</legend>
                     <div>
                         <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" placeholder="Ex. SarkToum" pattern="[A-Za-z0-9]+" title="Username can include letters (A-Z or a-z) and numbers only" required>
+                        <input type="text" id="username" name="username" autocomplete="off" placeholder="Ex. SarkToum" pattern="[A-Za-z0-9]+" title="Username can include letters (A-Z or a-z) and numbers only" required>
                     </div>
                     <div>
                         <label for="password1">Password:</label>
@@ -250,7 +110,7 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend> Lets get to know eachother! </legend>
+                    <legend> Lets get to know each other! </legend>
                     <div>
                         <label for="educationLevel">Current Education Level:</label>
                         <select id="educationLevel" name="educationLevel" required>
@@ -306,7 +166,7 @@
                         </select>
                     </div>
 
-                    <label for="languages">Languages Known:</label>
+                    <span for="languages">Languages Known:</span>
                     <div id="lang">
                     <input type="checkbox" id="english" name="languages" value="english">
                     <label for="english">English</label><br>
@@ -338,15 +198,22 @@
                         <textarea id="moreinfo" name="moreinfo" rows="6" cols="40"> </textarea>
                     </div>
                 </fieldset>
-                <div>
+                <div class="form_buttons">
                     <input type="submit" id="submit" name="submit">
                     <button type="reset">Reset</button>
                 </div>
             </form>
-
-            <p id="pass-error" style="color: red; display: none;">**Passwords do not match.</p>
-            <p id="lang-error" style="color: red; display: none;">**Select at least one language.</p>
-            <p id="edu-error" style="color: red; display: none;">**You can't have an education topic if you are not in a level equal or higher than university.</p>
+            <div class="form_buttons">
+                <div class="error-message" id="pass-error">
+                    <p>**Passwords do not match.</p>
+                </div>
+                <div class="error-message"  id="lang-error">
+                    <p>**Select at least one language.</p>
+                </div>
+                <div class="error-message" id="edu-error">
+                    <p>**You can't have an education topic if you are not in a level equal or higher than university.</p>
+                </div>
+            </div>
         </main>
         <aside>
             <article>
