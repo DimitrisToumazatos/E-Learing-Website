@@ -873,7 +873,7 @@ button[type="reset"]:hover {
         left: 0px;
         top: 25px;
     }
-    
+        
     #lecture-info ol {
         margin-left: 50px;
     }
@@ -897,7 +897,7 @@ button[type="reset"]:hover {
 
     /* Floating image container styling */
     .floating_image {
-        min-width: 100%;
+        max-width: 100%;
         margin-left: 15px;
     }
 
