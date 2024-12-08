@@ -743,6 +743,33 @@ button[type="reset"]:hover {
         font-size: 17px;
     }
 
+    select {
+        width: 50%;
+    }
+
+    select option {
+        font-size: 0.5em;
+    }
+
+    /* Additional Styling */
+    #lang {
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+
+    #lang div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #lang div input[type="checkbox"]
+    {
+        scale: 200%;
+    }
+
     /* Style for unordered lists within the footer */
     footer ul {
         list-style-type: none;
@@ -936,8 +963,16 @@ button[type="reset"]:hover {
     }
 
     input, textarea, label, button, legend, span, details, select {
-        font-size: 2rem; /* Increase font size */
-        padding: 1rem; /* Add more padding for touch-friendly elements */
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    select {
+        width: 50%;
+    }
+
+    select option {
+        font-size: 0.5em;
     }
 
     /* Additional Styling */
