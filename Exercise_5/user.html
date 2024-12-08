@@ -34,6 +34,124 @@
                 color: initial; /* Default color */
                 border: 1px solid black; /* Default border */
             }
+
+                        
+            /* Form Styling */
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            fieldset {
+                border: 2.5px solid #2d2d2d;
+                border-radius: 8px;
+                padding: 15px;
+                margin: 0;
+            }
+
+            legend {
+                font-weight: bold;
+                font-size: 1.1em;
+                color: #2d2d2d;
+                padding: 0 10px;
+            }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+                color: #2d2d2d;
+            }
+
+            input, select, textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 5px 0 15px;
+                border: 1px solid #2d2d2d;
+                border-radius: 5px;
+                font-size: 1em;
+                box-sizing: border-box;
+                transition: border-color 0.3s ease;
+            }
+
+            input:focus, select:focus, textarea:focus {
+                border-color: #247edf;
+                outline: none;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+            input[type="checkbox"] {
+                width: auto;
+                margin-right: 10px;
+            }
+
+            details {
+                margin-top: 10px;
+                font-size: 0.9em;
+            }
+
+            details summary {
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            details p {
+                margin-top: 10px;
+                color: #666;
+            }
+
+            /* Buttons */
+            input[type="submit"], button[type="reset"] {
+                display: inline-block;
+                background: #247edf;
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
+
+            input[type="submit"]:hover, button[type="reset"]:hover {
+                background: #0056b3;
+            }
+
+            button[type="reset"] {
+                background: #6c757d;
+            }
+
+            button[type="reset"]:hover {
+                background: #5a6268;
+            }
+
+            /* Error Messages */
+            #pass-error, #lang-error, #edu-error {
+                color: red;
+                font-size: 0.9em;
+                display: none;
+                margin-top: -10px;
+                margin-bottom: 10px;
+            }
+
+            /* Additional Styling */
+            #lang {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            #lang label {
+                margin-right: 10px;
+            }
+
+            #lang input[type="checkbox"] + label {
+                margin-bottom: 0;
+            }
         </style>
     </head>
 
@@ -87,16 +205,16 @@
                     </div>
                     <div>
                         <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone" autocomplete="phone" list="user_phone" placeholder="00302100000000" pattern="0030210[0-9]{7}" title="Phone number must start with 0030210 followed by 7 digits" required>
+                        <input type="tel" id="phone" name="phone" autocomplete="phone" list="user_phone" placeholder="+302100000000" pattern="\+30210[0-9]{7}" title="Phone number must start with +30210 followed by 7 digits" required>
                         <datalist id="user_phone">
-                            <option>00302100000000</option>
+                            <option>+302100000000</option>
                         </datalist>
                     </div>
                     <div>
                         <label for="pphone">Personal Phone Number:</label>
-                        <input type="tel" id="pphone" name="pphone" autocomplete="pphone" list="user_pphone" placeholder="00306911111111" pattern="003069[0-9]{8}" title="Phone number must start with 003069 followed by 8 digits" required>
+                        <input type="tel" id="pphone" name="pphone" autocomplete="pphone" list="user_pphone" placeholder="+306911111111" pattern="\+3069[0-9]{8}" title="Phone number must start with +3069 followed by 8 digits" required>
                         <datalist id="user_pphone">
-                            <option>00306900000000</option>
+                            <option>+306900000000</option>
                         </datalist>
                     </div>
                 </fieldset>
