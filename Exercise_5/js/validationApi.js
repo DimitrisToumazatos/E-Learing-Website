@@ -26,9 +26,6 @@ function main() {
 
             alertMessageContainer.innerHTML = "Form submitted successfully!";
             alertBox.style.display = "block";
-        } else {
-            event.preventDefault();
-            alert("Please correct the errors and try again.");
         }
     });
 }
@@ -81,6 +78,10 @@ function checkEducationLevelHighOrOtherThenTopicOther(event) {
         event.preventDefault();
         return false;
     } else {
+        educationlevel.style.border = '';
+        educationlevel.style.outline = '';
+        educationtopic.style.border = '';
+        educationtopic.style.outline = '';
         errorMessage.style.display = 'none';
         return true;
     }
