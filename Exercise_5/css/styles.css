@@ -907,7 +907,7 @@ button[type="reset"]:hover {
     }
 
     body {
-        line-height: 22px;
+        line-height: 2rem;
         font-family: 'My_web_font', Fallback, sans-serif;
         background-color:rgb(193, 221, 249);
         overflow-x: hidden;
@@ -957,7 +957,7 @@ button[type="reset"]:hover {
     }
 
     .navbar > ul {
-        width: 500px;
+        width: 100%;
         list-style-type: none;
         display: flex;
         flex-direction: row;
@@ -968,7 +968,7 @@ button[type="reset"]:hover {
         position: relative; /* Needed for the pseudo-element positioning */
         text-decoration: none;
         font-weight: bold;
-        font-size: xx-large;
+        font-size: 3rem;
         color: rgb(255, 255, 255);
     }
 
@@ -1026,6 +1026,7 @@ button[type="reset"]:hover {
         text-align: left;
         margin-left: 0.2em;
         font-size: 3rem;
+        line-height: 3rem;
     }
 
     .logo {
@@ -1233,26 +1234,78 @@ button[type="reset"]:hover {
         scale: 200%;
     }
 
-    footer ul {
-        list-style-type: none;
+    input, textarea, label, button, legend, span, details, select {
+        font-size: 2rem; /* Increase font size */
+        padding: 1rem; /* Add more padding for touch-friendly elements */
     }
+
+    /* Additional Styling */
+    #lang {
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+
+    #lang div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #lang div input[type="checkbox"]
+    {
+        scale: 400%;
+    }
+
+    input[type="submit"], button[type="reset"] {
+        display: inline-block;
+        background: #247edf;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 3em;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    button[type="reset"] {
+        background: #6c757d;
+    }    
 
     /* Sets footer colour and positioning */
     footer {
         background-color: #728fb4;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        height: 400px;
         flex-direction: column;
         margin-bottom: -1em;
         margin-left: -1em;
-        margin-top: 2em;
+        margin-right: -1em;
+        font-size: 200%;
+    }
+
+    footer p {
+        margin-top: 0;
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+
+    footer ul {
+        list-style-type: none;
+    }
+
+    footer a {
+        line-height: 1.5em;
     }
 
     .footer-info {
         max-width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
     }
 }
