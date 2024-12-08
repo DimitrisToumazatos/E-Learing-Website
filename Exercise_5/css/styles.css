@@ -263,6 +263,23 @@ ol h2 a {
     float: right;
 }
 
+/* Style for simple links */
+.simple_links a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Add hover effect for simple links */
+.simple_links a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the link list */
+.link_style {
+    list-style-type: none;
+    font-weight: bold;
+}
+
 /* Style for inputs with a placeholder shown */
 input:placeholder-shown {
     border: 1px solid black;
@@ -564,23 +581,6 @@ button[type="reset"]:hover {
         border-radius: 4px;
     }
 
-    /* Default styles for simple links */
-    .simple_links a {
-        color: black;
-        text-decoration: none;
-    }
-
-    /* Hover effect for simple links */
-    .simple_links a:hover {
-        text-decoration: underline;
-    }
-
-    /* Styling for list-style links */
-    .link_style {
-        list-style-type: none;
-        font-weight: bold;
-    }
-
     /* Category grid layout */
     #category-grid {
         list-style-type: none;
@@ -705,28 +705,6 @@ button[type="reset"]:hover {
         float: right;
         margin-bottom: 15px;
         border-radius: 4px;
-    }
-
-    /* Style text within floating image containers */
-    .floating_image > p {
-        float: right;
-    }
-
-    /* Style for simple links */
-    .simple_links a {
-        color: black;
-        text-decoration: none;
-    }
-
-    /* Add hover effect for simple links */
-    .simple_links a:hover {
-        text-decoration: underline;
-    }
-
-    /* Style for link list items */
-    .link_style {
-        list-style-type: none;
-        font-weight: bold;
     }
 
     /* Style for category grid layout */
@@ -917,30 +895,14 @@ button[type="reset"]:hover {
         float: right;
     }
 
-    /* Styling for simple links */
-    .simple_links a {
-        color: black;
-        text-decoration: none;
-    }
-
-    .simple_links a:hover {
-        text-decoration: underline;
-    }
-
-    /* Styling for the link list */
-    .link_style {
-        list-style-type: none;
-        font-weight: bold;
-    }
-
     /* Styling for category grid */
     #category-grid {
         list-style-type: none;
         display: grid;
         grid: "1"
-             "2"
-             "3"
-             "4";
+            "2"
+            "3"
+            "4";
         grid-template-columns: auto;
         align-items: center;
         justify-items: center;
